@@ -18,14 +18,7 @@ app.use(cors({
   credentials: true
 }));
 
-
 app.use(cookieParser());
 app.use("/user", userRoute);
 
-// connect to MongoDB Atlas
-connectMongoDB();
-
-const PORT = process.env.PORT || 7000;
-app.listen(PORT, () => {
-  console.log(`server is running on ${PORT}`);
-});
+// connectMongoDB etc...
